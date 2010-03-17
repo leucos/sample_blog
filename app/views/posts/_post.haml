@@ -1,0 +1,6 @@
+.post
+  .heading
+    %h2= link_to(post.title, url_for(:posts, :show, :id => post.id))
+    %p Posted by Admin
+  .contenta
+    = simple_format(post.body)

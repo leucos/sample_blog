@@ -1,0 +1,8 @@
+.post
+  .heading
+    %h2= @post.title
+    %p Posted by Admin
+  .contenta
+    = simple_format(@post.body)
+    
+%p= link_to 'Back to all posts', url_for(:posts, :index)
