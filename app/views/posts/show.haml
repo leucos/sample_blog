@@ -1,8 +1,11 @@
-.post
-  .heading
-    %h2= @post.title
-    %p Posted by #{post.account.email}
-  .contenta
-    = simple_format(@post.body)
+-@title = "#{@post.title}"
+
+#show
+  .post
+    .title= @post.title
+    .date= time_ago_in_words(@post.created_at || Time.now) + ' ago'
+    .body= simple_format(@post.body)
+    .details
+      .author Posted by #{@post.account.email}
     
-%p= link_to 'Back to all posts', url_for(:posts, :index)
+%p= link_to 'View all posts', url_for(:posts, :index)
