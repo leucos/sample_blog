@@ -39,5 +39,9 @@ class SampleBlog < Padrino::Application
   get "/" do
     "Hello World!"
   end
+  
+  get :about, :map => '/about_us' do
+    render :haml, "%p This is a sample blog created to demonstrate the power of Padrino!"
+  end
 
 end
