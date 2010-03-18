@@ -1,3 +1,5 @@
+source :rubygems
+
 # Project requirements
 gem 'rack-flash'
 gem 'thin' # or mongrel
