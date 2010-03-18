@@ -1,7 +1,7 @@
 .post
   .heading
     %h2= @post.title
-    %p Posted by Admin
+    %p Posted by #{post.account.email}
   .contenta
     = simple_format(@post.body)
     
