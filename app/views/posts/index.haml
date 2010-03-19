@@ -1,7 +1,7 @@
 - @title = "Welcome"
 
 - content_for :include do
-  = auto_discovery_link_tag(:rss, :title => "RSS", :href => url(:posts, :index, :format => :rss))
-  = auto_discovery_link_tag(:atom, :title => "ATOM", :href => url(:posts, :index, :format => :atom))
+  = feed_tag(:rss, :title => "RSS", :href => url(:posts, :index, :format => :rss))
+  = feed_tag(:atom, :title => "ATOM", :href => url(:posts, :index, :format => :atom))
   
 #posts= partial 'posts/post', :collection => @posts
