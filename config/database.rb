@@ -19,11 +19,8 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'postgresql',
-  :encoding  => 'utf8',
-  :database => 'padrino-sample-blog',
-  :username =>  'postgres',
-  :password => "#{ENV['POSTGRESQL_PASSWORD']}"
+  :adapter => 'sqlite3',
+  :database => Padrino.root('db', "development.db")
 }
 
 ActiveRecord::Base.configurations[:test] = {
