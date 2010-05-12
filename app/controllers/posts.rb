@@ -1,12 +1,7 @@
 SampleBlog.controllers :posts do
   get :index, :respond_to => [:html, :rss, :atom] do
     @posts = Post.all(:order => 'created_at desc')
-    case content_type
-      when :rss, :atom
-        render "posts/index", :layout => false
-      else
-        render 'posts/index' 
-    end
+    render 'posts/index'
   end
   
   
