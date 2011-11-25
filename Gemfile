@@ -2,12 +2,13 @@ source :rubygems
 
 # Project requirements
 gem 'bundler', '>= 0.9.26'
-gem 'rack-flash'
+gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'thin' # or mongrel
 
 # Component requirements
 gem 'haml'
-gem 'activerecord', "= 2.3.8", :require => "active_record"
+gem 'sass'
+gem 'activerecord', :require => "active_record"
 gem 'sqlite3-ruby', :require => "sqlite3"
 
 # Test requirements
@@ -16,4 +17,4 @@ gem 'shoulda', :group => "test"
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino
-gem 'padrino', ">= 0.9.13"
+gem 'padrino'

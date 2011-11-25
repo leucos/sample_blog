@@ -2,6 +2,7 @@ class Admin < Padrino::Application
   register Padrino::Helpers
   register Padrino::Mailer
   register Padrino::Admin::AccessControl
+  register Padrino::Rendering
   
   ##
   # Application-specific configuration options
